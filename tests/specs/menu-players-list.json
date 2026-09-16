@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "List players who ever used «انقلاب» in this group (up to 50) marking active vs destroyed; visible in private"
+              "text": "هنوز بازیکنی وارد نشده — در گروه «انقلاب» را بفرست."
             }
           }
         ],

@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Reply to target with 'انتقال {amount}' to transfer gold if sender has enough; announces transfer in group"
+              "text": "در گروه به پیام بازیکن پاسخ بده و «انتقال مبلغ» را بفرست."
             }
           }
         ],

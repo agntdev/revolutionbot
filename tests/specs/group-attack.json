@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "حمله (reply with 'حمله') — you're in the right place. What would you like to do next?"
+              "text": "در گروه، به پیام یک بازیکن پاسخ بده و «حمله» را بفرست."
             }
           }
         ],

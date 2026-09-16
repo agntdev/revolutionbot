@@ -7,12 +7,12 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Join — انقلاب — you're in the right place. What would you like to do next?"
+              "text": "خوش آمدی! با ۲۰۰۰ طلا وارد بازی شدی."
             }
           }
         ],
         "send": {
-          "text": "/plain"
+          "text": "انقلاب"
         }
       }
     ]
