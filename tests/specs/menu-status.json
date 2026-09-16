@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Show private player stats (production, barracks, soldiers, gold) — visible only to that player"
+              "text": "هنوز وارد بازی نشده‌ای. در یک گروه یا همین‌جا «انقلاب» را بفرست."
             }
           }
         ],

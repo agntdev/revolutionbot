@@ -1,17 +1,14 @@
 import { Composer } from "grammy";
+import type { Ctx } from "../bot.js";
+import { inlineButton, inlineKeyboard, registerMainMenuItem } from "../toolkit/index.js";
+import { getPlayer, groupKey, privateOnly, statsText } from "../game.js";
 
-// SCAFFOLD — generated from the bot blueprint BEFORE the agent runs.
-// Keep a LIVE registration (.command / .callbackQuery / …) so this feature is
-// never an empty stub. Replace the reply body with real logic + copy; if you
-// change the user-facing text, update tests/specs to match EXACTLY.
-// Do NOT rewrite src/bot.ts — buildBot() already auto-loads this module.
-// Menu: wire this into /start via registerMainMenuItem({ label: "وضعیت", data: "menu:status" }) if the toolkit exposes it.
-
-const composer = new Composer();
-
+registerMainMenuItem({ label: "وضعیت", data: "menu:status", order: 10 });
+const composer = new Composer<Ctx>();
 composer.callbackQuery("menu:status", async (ctx) => {
   await ctx.answerCallbackQuery();
-  await ctx.reply("Show private player stats (production, barracks, soldiers, gold) — visible only to that player");
+  if (!(await privateOnly(ctx))) return;
+  const p = getPlayer(ctx, ctx.from.id, groupKey(ctx));
+  await ctx.reply(p ? statsText(p) : "هنوز وارد بازی نشده‌ای. در یک گروه یا همین‌جا «انقلاب» را بفرست.", { reply_markup: inlineKeyboard([[inlineButton("⬅️ برگشت", "menu:main")]]) });
 });
-
 export default composer;

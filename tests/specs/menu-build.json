@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Open build submenu with ساخت تولیدی، ساخت پادگان، لغو"
+              "text": "یک ساختمان انتخاب کن. تولیدی روزانه طلا می‌سازد و پادگان سرباز."
             }
           }
         ],

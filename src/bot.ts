@@ -6,7 +6,9 @@ import type { StorageAdapter } from "grammy";
 // bot grows. Durable domain data must NOT live here — use the toolkit's
 // persistent storage (see AGENTS.md).
 export interface Session {
-  // example: step?: "awaiting_amount";
+  // The toolkit's configured storage adapter persists this serializable state.
+  // Conversation-only fields can be added here as the bot grows.
+  game?: import("./game.js").GameState;
 }
 
 export type Ctx = BotContext<Session>;
