@@ -1,0 +1,20 @@
+[
+  {
+    "name": "وضعیت بازیکن‌ها",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "List players who ever used «انقلاب» in this group (up to 50) marking active vs destroyed; visible in private"
+            }
+          }
+        ],
+        "send": {
+          "callback": "menu:players_list"
+        }
+      }
+    ]
+  }
+]
